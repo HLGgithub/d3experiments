@@ -55,20 +55,14 @@ Template.cobweb.onRendered( function() {
 	web.nodes(webParticles).links(webLinks).start();
 
 	function tick() {
-		svgWebLinks.attr("x1", function (d) {
-			return d.source.x
-		}).attr("y1", function (d) {
-			return d.source.y
-		}).attr("x2", function (d) {
-			return d.target.x
-		}).attr("y2", function (d) {
-			return d.target.y
-		});
+		svgWebLinks
+			.attr("x1", function (d) { return d.source.x })
+			.attr("y1", function (d) { return d.source.y })
+			.attr("x2", function (d) { return d.target.x })
+			.attr("y2", function (d) { return d.target.y });
 
-		svgWebNodes.attr("cx", function (d) {
-			return d.x
-		}).attr("cy", function (d) {
-			return d.y
-		});
+		svgWebNodes
+			.attr("cx", function (d) { return d.x })
+			.attr("cy", function (d) { return d.y });
 	};
 });
