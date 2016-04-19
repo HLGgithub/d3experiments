@@ -1,4 +1,4 @@
-# cobweb
-[Demo](http://cobweb.meteor.com/)
+## cobweb
 
 Meteor with D3
+
