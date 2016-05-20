@@ -1,3 +1,5 @@
+// How to add a collection?
+
 Template.cobweb.onRendered( function() {
 	var svg = d3.select("svg");
 	var web = d3.layout.force().linkStrength(1.0).friction(0.9).linkDistance(-10).charge(-50).gravity(0.07).theta(0.8).alpha(0.1).on("tick", tick);
@@ -39,7 +41,7 @@ Template.cobweb.onRendered( function() {
 
 			var offnow = i + segments;
 
-			if (offnow < n - 1) 
+			if (offnow < n - 1)
 				webLinks.push({source: i, target: offnow});
 			else
 				webLinks.push({source: i, target: n - 1});
@@ -54,7 +56,7 @@ Template.cobweb.onRendered( function() {
 	svgWebNodes.enter().append("circle").attr("r", rSmall).style("fill", colorSmall).call(drag);
 	web.nodes(webParticles).links(webLinks).start();
 
-  
+
   // Here is where we define the ticks
 	function tick() {
 		svgWebLinks
