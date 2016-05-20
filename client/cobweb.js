@@ -54,6 +54,8 @@ Template.cobweb.onRendered( function() {
 	svgWebNodes.enter().append("circle").attr("r", rSmall).style("fill", colorSmall).call(drag);
 	web.nodes(webParticles).links(webLinks).start();
 
+  
+  // Here is where we define the ticks
 	function tick() {
 		svgWebLinks
 			.attr("x1", function (d) { return d.source.x })
