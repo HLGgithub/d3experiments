@@ -25,6 +25,8 @@ Template.cobweb.onRendered( function() {
 	var origin = {x: width / 2, y: height / 2};
 	var radiusStep = radius / n;
 
+  // We can change the points function here
+  //
 	points.forEach(function (p, i) {
 		if (i !== points.length - 1) {
 			var angle = i * step;
